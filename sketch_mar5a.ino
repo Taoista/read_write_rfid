@@ -1,8 +1,26 @@
-#include <SPI.h>
+#include <dummy.h>
+
+#include <Arduino.h>
 #include <MFRC522.h>
+#include <MFRC522Extended.h>
+#include <deprecated.h>
+#include <require_cpp11.h>
+#include <SPI.h>
 
 /*
-In the ESP8266, D3 pin is RST_PIN and https://parzibyte.me/blog/2020/11/23/leer-rfid-nodemcu-esp8266-rc522/
+document data
+https://parzibyte.me/blog/2020/11/23/leer-rfid-nodemcu-esp8266-rc522/
+tutorial de conexion
+https://randomnerdtutorials.com/installing-esp8266-nodemcu-arduino-ide-2-0/
+In the ESP8266, D3 pin is RST_PIN and
+D4 pin is SS_PIN
+*/
+#define RST_PIN D3
+#define SS_PIN D4
+
+
+/*
+In the ESP8266, D3 pin is RST_PIN and
 D4 pin is SS_PIN
 */
 #define RST_PIN D3
